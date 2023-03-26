@@ -12,7 +12,7 @@ let mongoose;
 try {
   mongoose = require("mongoose");
   mongoose
-    .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .connect("mongodb+srv://cokolek:menona13@cluster0.lsauvkb.mongodb.net/?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("MongoDB Connected 🍕"));
 
 } catch (e) {
@@ -188,18 +188,18 @@ function formatDateString(inDateStr) {
   var dayIndex = dateStr.getDay()
   var dayName = days[dayIndex] 
   const months = [
-    'January',
-    'February',
-    'March',
-    'April',
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
     'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December'
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec'
   ]
   var monthIndex = dateStr.getMonth()
   var monthName = months[monthIndex]
